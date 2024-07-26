@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Chuka E-Commerce Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <header>
+      <h1>CHUKA E-Commerce Website</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html">Checkout</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required />
+        <label for="payment">Payment Method:</label>
+        <div id="card-element"></div>
+        <button type="submit">Place Order</button>
+      </form>
+      <div id="card-errors" role="alert"></div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Chuka E-commerce Website</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      const stripe = Stripe("my pulblic key"); //Input my pulic key
+      const elements = stripe.elements();
+      const cardElement = elements.creat("card");
+      cardElement.mount("#card-element");
+      const form = document.getElementById("checkout-form");
+      form.addEventListner("submit", async (event) => {
+        event.preventDefault();
+
+        const { paymentIntent, error } = await stripe.createPaymentIntent({
+          amount: 10000, //Input actual amount
+          currency: "GBP",
+          payment_method: {
+            card: cardElement,
+            billing_details: {
+              name: form.name.value,
+            },
+          },
+        });
+        if (error) {
+          document.getElementById("card-errors").textContent = error.message;
+        } else {
+          alert("Payment successful!");
+          //clear the cart and redirect to confirmation page
+          localStorage.removeItem("cart");
+          window.location.href = "index.html";
+        }
+      });
+    </script>
+  </body>
+</html>
