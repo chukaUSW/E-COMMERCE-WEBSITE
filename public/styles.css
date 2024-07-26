@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
 }
 
 header {
@@ -19,6 +20,8 @@ nav a {
 
 main {
   padding: 20px;
+  padding-bottom: 10vh;
+  min-height: 80vh;
 }
 
 .product-list {
@@ -52,4 +55,5 @@ footer {
   position: absolute;
   width: 100%;
   bottom: 0;
+  height: 6vh;
 }
