@@ -1,15 +1,15 @@
 //sample product data
 const products = [
-  { id: 0001, name: "Product 1", price: 10.0 },
-  { id: 0002, name: "Product 2", price: 20.0 },
-  { id: 0003, name: "Product 3", price: 15.0 },
-  { id: 0004, name: "Product 4", price: 25.0 },
-  { id: 0005, name: "Product 5", price: 30.0 },
-  { id: 0006, name: "Product 6", price: 35.0 },
-  { id: 0007, name: "Product 7", price: 40.0 },
-  { id: 0008, name: "Product 8", price: 45.0 },
-  { id: 0009, name: "Product 9", price: 50.0 },
-  { id: 0010, name: "Product 10", price: 55.0 },
+  { id: "0001", name: "Product 1", price: 10.0 },
+  { id: "0002", name: "Product 2", price: 20.0 },
+  { id: "0003", name: "Product 3", price: 15.0 },
+  { id: "0004", name: "Product 4", price: 25.0 },
+  { id: "0005", name: "Product 5", price: 30.0 },
+  { id: "0006", name: "Product 6", price: 35.0 },
+  { id: "0007", name: "Product 7", price: 40.0 },
+  { id: "0008", name: "Product 8", price: 45.0 },
+  { id: "0009", name: "Product 9", price: 50.0 },
+  { id: "0010", name: "Product 10", price: 55.0 },
 ];
 
 //Add cart functionality
