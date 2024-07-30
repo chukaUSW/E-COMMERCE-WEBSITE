@@ -1,4 +1,14 @@
 <main>
   <h2>Our Products</h2>
-  <%- include('./partials/products/Card') %>
+  <div class="products">
+    <% for( let i = 0; i < products.length; i++ ) { %> <%-
+    include('./partials/products/Card', {product: products[i]}) %> <% } %>
+  </div>
 </main>
+
+<style>
+  .products {
+    display: flex;
+    gap: 1rem;
+  }
+</style>

@@ -2,29 +2,13 @@
 <div class="img-card iCard-style1">
   <div class="card-content">
     <div class="card-image">
-      <span class="card-title">Cloud Beauty</span>
-      <img
-        src="https://www.dropbox.com/s/u330jm6faybxrvb/fog-3461451_640.jpg?raw=1"
-      />
+      <span class="card-title"><%= product.title %></span>
+      <img src="<%= product.image %>" />
     </div>
 
     <div class="card-text">
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Image by
-        <a
-          href="https://pixabay.com/users/Hans-2/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3461451"
-          style="color: #795548"
-          >Hans Braxmeier</a
-        >
-        from
-        <a
-          href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3461451"
-          style="color: #795548"
-          >Pixabay</a
-        >
-      </p>
-      <p><b>Price: </b>$50</p>
+      <p><%= product.description %></p>
+      <p><b>Price: </b>&pound;<%= product.price %></p>
     </div>
   </div>
 

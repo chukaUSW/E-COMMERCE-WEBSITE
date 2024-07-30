@@ -146,7 +146,7 @@
 }
 
 .img-card.iCard-style1 .card-text {
-  color: #795548;
+  color: #e91e63;
 }
 
 .img-card.iCard-style1 .card-link a {
@@ -214,7 +214,7 @@
 }
 
 .img-card.iCard-style3 .card-text {
-  color: #636060;
+  color: #e91e63;
 }
 
 .img-card.iCard-style3 .card-link {
@@ -284,7 +284,7 @@
   opacity: 0;
   line-height: 0;
   padding-bottom: 0;
-  color: #4c4c4c;
+  color: #e91e63;
 
   -webkit-transition: ease-in-out 0.5s;
   -moz-transition: ease-in-out 0.5s;
